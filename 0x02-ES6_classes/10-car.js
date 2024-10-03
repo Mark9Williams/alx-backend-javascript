@@ -1,6 +1,3 @@
-// Define a symbol for unique cloning
-const carSymbol = Symbol('clone');
-
 export default class Car {
   constructor(brand, motor, color) {
     this._brand = brand;
