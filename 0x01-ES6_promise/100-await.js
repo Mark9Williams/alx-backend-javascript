@@ -1,6 +1,5 @@
 // 100-await.js
-import uploadPhoto from './utils.js'; // Adjust the path as needed
-import createUser from './utils.js'; // Adjust the path as needed
+import { uploadPhoto, createUser } from './utils'; // Combine the imports
 
 export default async function asyncUploadUser(fileName, firstName, lastName) {
   try {

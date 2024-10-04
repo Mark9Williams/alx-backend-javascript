@@ -9,11 +9,8 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
 
   // Return the result of Promise.allSettled
   return Promise.allSettled([signUpPromise, uploadPromise])
-    .then((results) => {
-      // Map the results to the required structure
-      return results.map((result) => ({
-        status: result.status,
-        value: result.status === 'fulfilled' ? result.value : result.reason,
-      }));
-    });
+    .then((results) => results.map((result) => ({
+      status: result.status,
+      value: result.status === 'fulfilled' ? result.value : result.reason,
+    })));
 }
