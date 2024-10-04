@@ -1,9 +1,9 @@
 export default function getNeighborhoodsList() {
   this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
 
-  const self = this;
+  // the arrow function uses 'this' from the parent scope
   this.addNeighborhood = (newNeighborhood) => {
-    self.sanFranciscoNeighborhoods.push(newNeighborhood);
-    return self.sanFranciscoNeighborhoods;
+    this.sanFranciscoNeighborhoods.push(newNeighborhood);
+    return this.sanFranciscoNeighborhoods;
   };
 }
